@@ -1,0 +1,20 @@
+
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-8">
+
+      <!--Se utiliza para navegar entre componentres-->
+      <ng-template [ngIf]="route == '/trabajo/crearLibro'">
+        <app-crear-libro></app-crear-libro>
+      </ng-template>
+      <ng-template [ngIf]="route == '/trabajo/modificarLibro'">
+      <app-modificar-libro> </app-modificar-libro>
+      </ng-template>
+
+    </div>
+  </div>
+</div>
